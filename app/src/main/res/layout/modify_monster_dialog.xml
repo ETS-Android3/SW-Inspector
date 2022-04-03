@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp">
+
+    <TextView
+        android:id="@+id/tv_modify_monster_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="test"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_view_monster_dismiss"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/gl_horizontal">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:columnCount="2">
+
+                <TextView
+                    android:id="@+id/tv_modify_atk"
+                    android:layout_columnWeight="1"
+                    android:text="Attack weight" />
+
+                <EditText
+                    android:id="@+id/ev_modify_atk"
+                    android:layout_columnWeight="1"
+                    android:hint="0-5"
+                    android:inputType="number"
+                    android:digits="0123456789"
+                    android:maxLength="1"
+                    android:text="0"
+                    android:nextFocusDown="@id/ev_modify_def"
+                    android:imeOptions="actionNext"/>
+
+                <TextView
+                    android:id="@+id/tv_modify_def"
+                    android:layout_columnWeight="1"
+                    android:text="Defense weight" />
+
+                <EditText
+                    android:id="@+id/ev_modify_def"
+                    android:layout_columnWeight="1"
+                    android:hint="0-5"
+                    android:inputType="number|none"
+                    android:digits="0123456789"
+                    android:maxLength="1"
+                    android:text="0"
+                    android:nextFocusDown="@id/ev_modify_hp"
+                    android:imeOptions="actionNext"/>
+
+                <TextView
+                    android:id="@+id/tv_modify_hp"
+                    android:layout_columnWeight="1"
+                    android:text="HP weight" />
+
+                <EditText
+                    android:id="@+id/ev_modify_hp"
+                    android:layout_columnWeight="1"
+                    android:hint="0-5"
+                    android:inputType="number|none"
+                    android:digits="0123456789"
+                    android:maxLength="1"
+                    android:text="0"
+                    android:nextFocusDown="@id/ev_modify_spd"
+                    android:imeOptions="actionNext"/>
+
+                <TextView
+                    android:id="@+id/tv_modify_spd"
+                    android:layout_columnWeight="1"
+                    android:text="Speed weight" />
+
+                <EditText
+                    android:id="@+id/ev_modify_spd"
+                    android:layout_columnWeight="1"
+                    android:hint="0-5"
+                    android:inputType="number|none"
+                    android:digits="0123456789"
+                    android:maxLength="1"
+                    android:text="0"
+                    android:nextFocusDown="@id/ev_modify_crit_rate"
+                    android:imeOptions="actionNext"/>
+
+                <TextView
+                    android:id="@+id/tv_modify_crit_rate"
+                    android:layout_columnWeight="1"
+                    android:text="Critical rate weight" />
+
+                <EditText
+                    android:id="@+id/ev_modify_crit_rate"
+                    android:layout_columnWeight="1"
+                    android:hint="0-5"
+                    android:inputType="number|none"
+                    android:digits="0123456789"
+                    android:maxLength="1"
+                    android:text="0"
+                    android:nextFocusDown="@id/ev_modify_crit_dmg"
+                    android:imeOptions="actionNext"/>
+
+                <TextView
+                    android:id="@+id/tv_modify_crit_dmg"
+                    android:layout_columnWeight="1"
+                    android:text="Critical damage weight" />
+
+                <EditText
+                    android:id="@+id/ev_modify_crit_dmg"
+                    android:layout_columnWeight="1"
+                    android:hint="0-5"
+                    android:inputType="number|none"
+                    android:digits="0123456789"
+                    android:maxLength="1"
+                    android:text="0"
+                    android:nextFocusDown="@id/ev_modify_resistance"
+                    android:imeOptions="actionNext"/>
+
+                <TextView
+                    android:id="@+id/tv_modify_resistance"
+                    android:layout_columnWeight="1"
+                    android:text="Resistance weight" />
+
+                <EditText
+                    android:id="@+id/ev_modify_resistance"
+                    android:layout_columnWeight="1"
+                    android:hint="0-5"
+                    android:inputType="number|none"
+                    android:digits="0123456789"
+                    android:maxLength="1"
+                    android:text="0"
+                    android:nextFocusDown="@id/ev_modify_accuracy"
+                    android:imeOptions="actionNext"/>
+
+                <TextView
+                    android:id="@+id/tv_modify_accuracy"
+                    android:layout_columnWeight="1"
+                    android:text="Accuracy weight" />
+
+                <EditText
+                    android:id="@+id/ev_modify_accuracy"
+                    android:layout_columnWeight="1"
+                    android:hint="0-5"
+                    android:inputType="number|none"
+                    android:digits="0123456789"
+                    android:maxLength="1"
+                    android:text="0"
+                    android:nextFocusForward="@id/ev_modify_atk"
+                    android:imeOptions="actionNext"/>
+            </GridLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Preferred sets"/>
+            <LinearLayout
+                android:id="@+id/ll_set_spinners"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+                <Spinner
+                    android:id="@+id/set_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+            <Button
+                android:id="@+id/btn_add_set_spinner"
+                android:text="Add set"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:text="Slot 2 main stat preferred"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <GridLayout
+                android:id="@+id/gl_slot_two_pref"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="2">
+                <CheckBox
+                    android:tag="ATK_PERC"
+                    android:text="ATK%"
+                    android:layout_columnWeight="1"/>
+                <CheckBox
+                    android:tag="ATK"
+                    android:text="ATK"
+                    android:layout_columnWeight="1"/>
+                <CheckBox
+                    android:tag="HP_PERC"
+                    android:text="HP%"
+                    android:layout_columnWeight="1"/>
+                <CheckBox
+                    android:tag="HP"
+                    android:text="HP"
+                    android:layout_columnWeight="1"/>
+                <CheckBox
+                    android:tag="DEF_PERC"
+                    android:text="DEF%"
+                    android:layout_columnWeight="1"/>
+                <CheckBox
+                    android:tag="DEF"
+                    android:text="DEF"
+                    android:layout_columnWeight="1"/>
+                <CheckBox
+                    android:tag="SPD"
+                    android:text="Speed"
+                    android:layout_columnWeight="1"/>
+            </GridLayout>
+
+            <TextView
+                android:text="Slot 4 main stat preferred"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <GridLayout
+                android:id="@+id/gl_slot_four_pref"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="2">
+                <CheckBox
+                    android:tag="ATK_PERC"
+                    android:text="ATK%"
+                    android:layout_columnWeight="1"/>
+                <CheckBox
+                    android:tag="ATK"
+                    android:text="ATK"
+                    android:layout_columnWeight="1"/>
+                <CheckBox
+                    android:tag="HP_PERC"
+                    android:text="HP%"
+                    android:layout_columnWeight="1"/>
+                <CheckBox
+                    android:tag="HP"
+                    android:text="HP"
+                    android:layout_columnWeight="1"/>
+                <CheckBox
+                    android:tag="DEF_PERC"
+                    android:text="DEF%"
+                    android:layout_columnWeight="1"/>
+                <CheckBox
+                    android:tag="DEF"
+                    android:text="DEF"
+                    android:layout_columnWeight="1"/>
+                <CheckBox
+                    android:tag="CRI_RATE"
+                    android:text="Crit rate"
+                    android:layout_columnWeight="1"/>
+                <CheckBox
+                    android:tag="CRI_DMG"
+                    android:text="Crit damage"
+                    android:layout_columnWeight="1"/>
+            </GridLayout>
+
+            <TextView
+                android:text="Slot 6 main stat preferred"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <GridLayout
+                android:id="@+id/gl_slot_six_pref"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="2">
+                <CheckBox
+                    android:tag="ATK_PERC"
+                    android:text="ATK%"
+                    android:layout_columnWeight="1"/>
+                <CheckBox
+                    android:tag="ATK"
+                    android:text="ATK"
+                    android:layout_columnWeight="1"/>
+                <CheckBox
+                    android:tag="HP_PERC"
+                    android:text="HP%"
+                    android:layout_columnWeight="1"/>
+                <CheckBox
+                    android:tag="HP"
+                    android:text="HP"
+                    android:layout_columnWeight="1"/>
+                <CheckBox
+                    android:tag="DEF_PERC"
+                    android:text="DEF%"
+                    android:layout_columnWeight="1"/>
+                <CheckBox
+                    android:tag="DEF"
+                    android:text="DEF"
+                    android:layout_columnWeight="1"/>
+                <CheckBox
+                    android:tag="RESISTANCE"
+                    android:text="Resistance"
+                    android:layout_columnWeight="1"/>
+                <CheckBox
+                    android:tag="ACCURACY"
+                    android:text="Accuracy"
+                    android:layout_columnWeight="1"/>
+            </GridLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btn_view_monster_dismiss"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Discard"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn_modify_monster_save"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btn_modify_monster_save"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btn_view_monster_dismiss" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.06" />
+</androidx.constraintlayout.widget.ConstraintLayout>

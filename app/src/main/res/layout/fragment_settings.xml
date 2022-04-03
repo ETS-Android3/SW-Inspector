@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SettingsFragment">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="6dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:padding="6dp"
+                android:id="@+id/tv_weight"
+                android:text="Weight and Formula settings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+            <Button
+                android:id="@+id/btn_settings_export"
+                android:text="Export weights"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_weight" />
+            <Button
+                android:id="@+id/btn_settings_import"
+                android:text="Import weights"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btn_settings_export" />
+            <CheckBox
+                android:id="@+id/cb_settings_flat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Reduce flat weight"
+                app:layout_constraintEnd_toStartOf="@id/cb_settings_set"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btn_settings_import" />
+
+            <CheckBox
+                android:id="@+id/cb_settings_set"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Include rune set"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/cb_settings_flat"
+                app:layout_constraintTop_toBottomOf="@id/btn_settings_import" />
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/tv_settings_flat"
+                android:text="Flat weight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@id/cb_settings_flat"
+                app:layout_constraintTop_toBottomOf="@id/cb_settings_flat"/>
+            <EditText
+                android:visibility="gone"
+                android:id="@+id/et_settings_flat"
+                android:inputType="numberDecimal"
+                android:hint="0.0"
+                android:layout_width="64dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintBaseline_toBottomOf="@id/tv_settings_flat"
+                app:layout_constraintStart_toEndOf="@id/tv_settings_flat"/>
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/tv_settings_set"
+                android:text="Set weight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@id/cb_settings_set"
+                app:layout_constraintTop_toBottomOf="@id/cb_settings_set"/>
+            <EditText
+                android:visibility="gone"
+                android:id="@+id/et_settings_set"
+                android:inputType="numberDecimal"
+                android:hint="0.0"
+                android:layout_width="64dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintBaseline_toBottomOf="@id/tv_settings_set"
+                app:layout_constraintStart_toEndOf="@id/tv_settings_set"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="32dp">
+
+
+        <Button
+            android:id="@+id/btn_settings_save"
+            android:background="@drawable/background_save"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:drawableStart="@drawable/ic_save"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:paddingLeft="24dp"
+            android:gravity="center_horizontal"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

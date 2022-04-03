@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp">
+
+    <TextView
+        android:id="@+id/tv_view_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="test"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_view_monster_dismiss"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/gl_horizontal">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:columnCount="2">
+
+                <TextView
+                    android:id="@+id/tv_import_atk"
+                    android:layout_columnWeight="1"
+                    android:text="Attack weight"
+                    android:layout_marginBottom="12dp"/>
+
+                <TextView
+                    android:id="@+id/tv_view_atk_value"
+                    android:layout_columnWeight="1"
+                    android:maxLength="1"
+                    android:text="0" />
+
+                <TextView
+                    android:id="@+id/tv_modify_def"
+                    android:layout_marginBottom="12dp"
+                    android:layout_columnWeight="1"
+                    android:text="Defense weight" />
+
+                <TextView
+                    android:id="@+id/tv_view_def_value"
+                    android:layout_columnWeight="1"
+                    android:text="0" />
+
+                <TextView
+                    android:id="@+id/tv_modify_hp"
+                    android:layout_marginBottom="12dp"
+                    android:layout_columnWeight="1"
+                    android:text="HP weight" />
+
+                <TextView
+                    android:id="@+id/tv_view_hp_value"
+                    android:layout_columnWeight="1"
+                    android:text="0" />
+
+                <TextView
+                    android:id="@+id/tv_modify_spd"
+                    android:layout_marginBottom="12dp"
+                    android:layout_columnWeight="1"
+                    android:text="Speed weight" />
+
+                <TextView
+                    android:id="@+id/tv_view_spd_value"
+                    android:layout_columnWeight="1"
+                    android:text="0"/>
+
+                <TextView
+                    android:id="@+id/tv_modify_crit_rate"
+                    android:layout_marginBottom="12dp"
+                    android:layout_columnWeight="1"
+                    android:text="Critical rate weight" />
+
+                <TextView
+                    android:id="@+id/tv_view_crit_rate_value"
+                    android:layout_columnWeight="1"
+                    android:text="0" />
+
+                <TextView
+                    android:id="@+id/tv_modify_crit_dmg"
+                    android:layout_marginBottom="12dp"
+                    android:layout_columnWeight="1"
+                    android:text="Critical damage weight" />
+
+                <TextView
+                    android:id="@+id/tv_view_crit_dmg_value"
+                    android:layout_columnWeight="1"
+                    android:text="0" />
+
+                <TextView
+                    android:id="@+id/tv_modify_resistance"
+                    android:layout_marginBottom="12dp"
+                    android:layout_columnWeight="1"
+                    android:text="Resistance weight" />
+
+                <TextView
+                    android:id="@+id/tv_view_resistance_value"
+                    android:layout_columnWeight="1"
+                    android:text="0" />
+
+                <TextView
+                    android:id="@+id/tv_modify_accuracy"
+                    android:layout_marginBottom="12dp"
+                    android:layout_columnWeight="1"
+                    android:text="Accuracy weight" />
+
+                <TextView
+                    android:id="@+id/tv_view_accuracy_value"
+                    android:layout_columnWeight="1"
+                    android:text="0" />
+            </GridLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Preferred sets"/>
+            <LinearLayout
+                android:id="@+id/ll_set_spinners"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+
+            </LinearLayout>
+            <TextView
+                android:text="Slot 2 main stat preferred"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <GridLayout
+                android:id="@+id/gl_slot_two_pref"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="2">
+                <CheckBox
+                    android:tag="ATK_PERC"
+                    android:text="ATK%"
+                    android:layout_columnWeight="1"
+                    android:clickable="false"/>
+                <CheckBox
+                    android:tag="ATK"
+                    android:text="ATK"
+                    android:layout_columnWeight="1"
+                    android:clickable="false"/>
+                <CheckBox
+                    android:tag="HP_PERC"
+                    android:text="HP%"
+                    android:layout_columnWeight="1"
+                    android:clickable="false"/>
+                <CheckBox
+                    android:tag="HP"
+                    android:text="HP"
+                    android:layout_columnWeight="1"
+                    android:clickable="false"/>
+                <CheckBox
+                    android:tag="DEF_PERC"
+                    android:text="DEF%"
+                    android:layout_columnWeight="1"
+                    android:clickable="false"/>
+                <CheckBox
+                    android:tag="DEF"
+                    android:text="DEF"
+                    android:layout_columnWeight="1"
+                    android:clickable="false"/>
+                <CheckBox
+                    android:tag="SPD"
+                    android:text="Speed"
+                    android:layout_columnWeight="1"
+                    android:clickable="false"/>
+            </GridLayout>
+
+            <TextView
+                android:text="Slot 4 main stat preferred"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <GridLayout
+                android:id="@+id/gl_slot_four_pref"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="2">
+                <CheckBox
+                    android:tag="ATK_PERC"
+                    android:text="ATK%"
+                    android:layout_columnWeight="1"
+                    android:clickable="false"/>
+                <CheckBox
+                    android:tag="ATK"
+                    android:text="ATK"
+                    android:layout_columnWeight="1"
+                    android:clickable="false"/>
+                <CheckBox
+                    android:tag="HP_PERC"
+                    android:text="HP%"
+                    android:layout_columnWeight="1"
+                    android:clickable="false"/>
+                <CheckBox
+                    android:tag="HP"
+                    android:text="HP"
+                    android:layout_columnWeight="1"
+                    android:clickable="false"/>
+                <CheckBox
+                    android:tag="DEF_PERC"
+                    android:text="DEF%"
+                    android:layout_columnWeight="1"
+                    android:clickable="false"/>
+                <CheckBox
+                    android:tag="DEF"
+                    android:text="DEF"
+                    android:layout_columnWeight="1"
+                    android:clickable="false"/>
+                <CheckBox
+                    android:tag="CRI_RATE"
+                    android:text="Crit rate"
+                    android:layout_columnWeight="1"
+                    android:clickable="false"/>
+                <CheckBox
+                    android:tag="CRI_DMG"
+                    android:text="Crit damage"
+                    android:layout_columnWeight="1"
+                    android:clickable="false"/>
+            </GridLayout>
+
+            <TextView
+                android:text="Slot 6 main stat preferred"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <GridLayout
+                android:id="@+id/gl_slot_six_pref"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="2">
+                <CheckBox
+                    android:tag="ATK_PERC"
+                    android:text="ATK%"
+                    android:layout_columnWeight="1"
+                    android:clickable="false"/>
+                <CheckBox
+                    android:tag="ATK"
+                    android:text="ATK"
+                    android:layout_columnWeight="1"
+                    android:clickable="false"/>
+                <CheckBox
+                    android:tag="HP_PERC"
+                    android:text="HP%"
+                    android:layout_columnWeight="1"
+                    android:clickable="false"/>
+                <CheckBox
+                    android:tag="HP"
+                    android:text="HP"
+                    android:layout_columnWeight="1"
+                    android:clickable="false"/>
+                <CheckBox
+                    android:tag="DEF_PERC"
+                    android:text="DEF%"
+                    android:layout_columnWeight="1"
+                    android:clickable="false"/>
+                <CheckBox
+                    android:tag="DEF"
+                    android:text="DEF"
+                    android:layout_columnWeight="1"
+                    android:clickable="false"/>
+                <CheckBox
+                    android:tag="RESISTANCE"
+                    android:text="Resistance"
+                    android:layout_columnWeight="1"
+                    android:clickable="false"/>
+                <CheckBox
+                    android:tag="ACCURACY"
+                    android:text="Accuracy"
+                    android:layout_columnWeight="1"
+                    android:clickable="false"/>
+            </GridLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btn_view_monster_dismiss"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Dismiss"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.06" />
+</androidx.constraintlayout.widget.ConstraintLayout>

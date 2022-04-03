@@ -1,0 +1,37 @@
+<resources>
+    <!-- Reply Preference -->
+    <string-array name="reply_entries">
+        <item>Reply</item>
+        <item>Reply to all</item>
+    </string-array>
+
+    <string-array name="reply_values">
+        <item>reply</item>
+        <item>reply_all</item>
+    </string-array>
+
+    <string-array name="sets">
+        <item>None</item>
+        <item>Accuracy</item>
+        <item>Blade</item>
+        <item>Despair</item>
+        <item>Destroy</item>
+        <item>Determination</item>
+        <item>Endure</item>
+        <item>Energy</item>
+        <item>Enhance</item>
+        <item>Fatal</item>
+        <item>Fight</item>
+        <item>Focus</item>
+        <item>Guard</item>
+        <item>Nemesis</item>
+        <item>Rage</item>
+        <item>Revenge</item>
+        <item>Shield</item>
+        <item>Swift</item>
+        <item>Tolerance</item>
+        <item>Vampire</item>
+        <item>Violent</item>
+        <item>Will</item>
+    </string-array>
+</resources>
