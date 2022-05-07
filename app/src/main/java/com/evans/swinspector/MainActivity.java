@@ -90,15 +90,13 @@ public class MainActivity extends AppCompatActivity{
     }
 
     public void checkOverlayPermission() {
-        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            if(!Settings.canDrawOverlays(this)) {
-                Intent intent = new Intent(Settings.ACTION_MANAGE_OVERLAY_PERMISSION);
-                startActivity(intent);
-            } else {
-                startService(new Intent(MainActivity.this, InspectorService.class));
-            }
+        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.M) {
+            getApplicationContext().startService(new Intent(getApplicationContext(), InspectorService.class));
+        } else if (Settings.canDrawOverlays(getApplicationContext())) {
+            getApplicationContext().startService(new Intent(getApplicationContext(), InspectorService.class));
         } else {
-            Toast.makeText(this, "You do not have the correct Android version to run the overlay.", Toast.LENGTH_SHORT).show();
+            checkOverlayPermission();
+            Toast.makeText(getApplicationContext(), "You need System Alert Window Permission to do this", Toast.LENGTH_SHORT).show();
         }
     }
 
