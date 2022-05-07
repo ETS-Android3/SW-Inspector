@@ -62,7 +62,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][home-screenshot]](https://example.com)
+<img src="/assets/home.jpg" alt="Home screenshot" width="200" height="800">
 
 An android application designed to assist the player in rune decisions.
 
