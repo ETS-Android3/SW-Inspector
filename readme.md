@@ -62,7 +62,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+[![Product Name Screen Shot][home-screenshot]](https://example.com)
 
 An android application designed to assist the player in rune decisions.
 
@@ -146,4 +146,4 @@ Project Link: [https://github.com/AutoChrome/SW-Inspector](https://github.com/Au
 [license-url]: https://github.com/AutoChrome/SW-Inspector/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/linkedin_username
-#[product-screenshot]: images/screenshot.png
+[home-screenshot]: assets/home.jpg
