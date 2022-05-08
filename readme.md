@@ -20,12 +20,8 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/AutoChrome/SW-Inspector">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
-  </a>
 
 <h3 align="center">SW Inspector</h3>
-
   <p align="center">
     An android application designed to assist the player in rune decisions.
   </p>
@@ -62,8 +58,6 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-<img src="/assets/home.jpg" alt="Home screenshot" height="800">
-
 An android application designed to assist the player in rune decisions.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -88,11 +82,15 @@ An android application designed to assist the player in rune decisions.
 
 
 <!-- USAGE EXAMPLES -->
-## Usage
+## Gallery
+| Home | History |
+| :----: | :-------: |
+| <img src="assets/home.jpg" alt="Home screenshot" height="400"> | <img src="assets/history.jpg" alt="History screenshot" height="400"> |
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+| Monsters | Settings |
+| :--------: | :--------: |
+| <img src="assets/monsters.jpg" alt="Monsters screenshot" height="400"> | <img src="assets/settings.jpg" alt="Settings screenshot" height="400"> |
 
-_For more examples, please refer to the [Documentation](https://example.com)_
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
